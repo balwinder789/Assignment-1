@@ -10,14 +10,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /**
+ * Comment Header
  * App name is Assignment 1
  * Made by Balwinder Singh (200326404)
  * App creation date 29/september/2016
  * App description - calculate the sales bonus of an employee
- * 
- * 
- */
+ *  
+ **/
 
+/** 
+ * Section header 
+ * in this app i used some functions and if else statements
+ **/
 namespace Assignment_1
 {
     public partial class MailOrder : Form
@@ -28,7 +32,7 @@ namespace Assignment_1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CalculateButton_Click(object sender, EventArgs e)
         {
             // declare variables with relevant names
             String EmployeeName;
@@ -38,18 +42,17 @@ namespace Assignment_1
             Double TotalMonthlySales;
             Double TotalBonusAmount;
             Double salesBonus;
-            //  double SalesBonus;
-      
+ 
             // validation the data 
             try
             {
-                //  Double employeeName = Convert.ToChar(EmployeeNameTextBox.Text);
-                //    Double employeeID = Convert.ToDouble(EmployeeIDTextBox.Text);
-
+                // add the variable into textboxes
                 EmployeeName = Convert.ToString(EmployeeNameTextBox.Text);
                 EmployeeID = Convert.ToInt16(EmployeeIDTextBox.Text);
                 HoursWorked = double.Parse(HoursWorkedTextBox.Text);
                 TotalMonthlySales = double.Parse(TotalSalesTextBox.Text);
+                
+                // validate the if statement
                 if (HoursWorked > 160 || HoursWorked <0)
                 {
                     MessageBox.Show("Please enter a value less than 160 and greater than 0. !! no negative numbers!!");
@@ -58,31 +61,23 @@ namespace Assignment_1
                 }
                 else 
                 {
-
-                    
-
                     TotalBonusAmount = TotalMonthlySales * 0.02;//=2
                     PercentageOfHoursWorked = HoursWorked / 160; // 0.25
                     salesBonus = PercentageOfHoursWorked * TotalBonusAmount;
 
-
-
-
-                    // show the sales bonus amount in $
+                   // show the sales bonus amount in $
                     SalesBonusTextBox.Text = salesBonus.ToString("C2");
 
                 }
-                         }
-                         catch (Exception exception)
+             }
+              catch (Exception exception)
             {
                 
-
-
-              MessageBox.Show("Invalid Data Entered", "Input Error");
+             MessageBox.Show("Invalid Data Entered", "Input Error");
                  
-                             }
-
             }
+
+         }
      
         // this is the coding for 2nd button that is print button
         private void PrintButton_Click(object sender, EventArgs e)
@@ -96,13 +91,13 @@ namespace Assignment_1
         }
     
         // this is the coding for 3rd button that is clear button
-        private void button3_Click(object sender, EventArgs e)
+        private void ClearButton_Click(object sender, EventArgs e)
         {
             // clear all content of form according to the coding of function
             ClearContent(this.Controls);
         }
 
-     // this function will clear some the content of some textboxes
+     // this function will clear the content of some textboxes
         private void ClearContent(Control.ControlCollection textboxes)
         {
             foreach (Control clear in textboxes)
