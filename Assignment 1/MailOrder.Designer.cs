@@ -1,6 +1,6 @@
 ﻿namespace Assignment_1
 {
-    partial class InitialForm
+    partial class MailOrder
     {
         /// <summary>
         /// Required designer variable.
@@ -102,7 +102,7 @@
             // HoursWorkedTextBox
             // 
             this.HoursWorkedTextBox.Location = new System.Drawing.Point(203, 287);
-            this.HoursWorkedTextBox.MaxLength = 444444;
+            this.HoursWorkedTextBox.MaxLength = 160;
             this.HoursWorkedTextBox.Name = "HoursWorkedTextBox";
             this.HoursWorkedTextBox.Size = new System.Drawing.Size(100, 20);
             this.HoursWorkedTextBox.TabIndex = 6;
@@ -157,6 +157,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(55, 19);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(59, 17);
@@ -177,22 +178,23 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(258, 452);
+            this.button2.Location = new System.Drawing.Point(371, 452);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 13;
             this.button2.Text = "Print";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.PrintButton_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(412, 452);
+            this.button3.Location = new System.Drawing.Point(228, 452);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 14;
-            this.button3.Text = "Clear";
+            this.button3.Text = "Next";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox1
             // 
@@ -203,7 +205,7 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // InitialForm
+            // MailOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -223,8 +225,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "InitialForm";
-            this.Text = "Initial Form";
+            this.Name = "MailOrder";
+            this.Text = "MailOrder";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

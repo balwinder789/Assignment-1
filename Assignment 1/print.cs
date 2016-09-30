@@ -12,7 +12,7 @@ namespace Assignment_1
 {
     public partial class print : Form
     {
-        public InitialForm previousForm { get; set; }
+        public MailOrder previousForm { get; set; }
         public print()
         {
             InitializeComponent();
